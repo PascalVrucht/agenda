@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Agenda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mijn Agenda</h1>
+
+    <form id="agendaForm">
+      <input type="date" id="datum" required>
+      <select id="categorie">
+        <option value="School">School</option>
+        <option value="Privé">Privé</option>
+      </select>
+      <input type="text" id="titel" placeholder="Titel / Taak" required>
+      <button type="submit">Toevoegen</button>
+    </form>
+
+    <div class="filter-group">
+      <button onclick="filterAgenda('Alles')">Alles</button>
+      <button onclick="filterAgenda('School')">School</button>
+      <button onclick="filterAgenda('Privé')">Privé</button>
+    </div>
+
+    <ul id="agendaLijst"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
